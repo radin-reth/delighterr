@@ -57,7 +57,32 @@
       </div>
 
       <div class="row">
-        <div class="col-sm-3">collapse menu</div>
+        <div class="col-sm-3">
+          <ul class="nav nav-stacked" id="accordion1">
+              <li class="panel"> 
+                <a data-toggle="collapse" data-parent="#accordion1" href="#firstLink">Contacts</a>
+                <ul id="firstLink" class="collapse">
+                    <li>Add New</li>
+                    <li>Import Contacts</li>
+                </ul>
+              </li>
+
+              <li class="panel"> 
+                <a data-toggle="collapse" data-parent="#accordion1" href="#secondLink">Feedback</a>
+                <ul id="secondLink" class="collapse">
+                    <li>SubTest2</li>
+                    <li>SubTest2</li>
+                    <li>SubTest2</li>
+                    <li>SubTest2</li>
+                </ul>
+              </li>
+              <li><a href="#">Referrals</a>
+              </li>
+              <li><a href="#">Account</a>
+              </li>
+          </ul>
+        </div>
+
         <div class="col-sm-9">
           <div class="row">
             <div class="col-xs-12">

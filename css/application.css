@@ -72,3 +72,9 @@
 .social-icon {
   margin-right: 12px;
 }
+
+#accordion1 > li {
+  margin: 0;
+  box-shadow: none;
+  border: 0;
+}

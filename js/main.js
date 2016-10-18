@@ -1,0 +1,1 @@
+$('.select2-component').select2();

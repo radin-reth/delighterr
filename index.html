@@ -15,6 +15,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/select2.min.css">
 
     <link rel="stylesheet" type="text/css" href="css/application.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -106,6 +107,7 @@
                 <h3 class="title">Engagement Plan</h3>
                 <select>
                   <option value="Silver Package (default)">Silver Package (default)</option>
+                  <option value="apple">apple</option>
                 </select>
               </div>
 
@@ -140,10 +142,72 @@
               <div class="cart">
                 <h3 class="title">Interests</h3>
                 <ul>
-                  <li><span>Hobbies</span></li>
-                  <li><span>Sports</span></li>
-                  <li><span>Musics</span></li>
-                  <li><span>Pets</span></li>
+                  <li>
+                    <table width="100%">
+                      <tr>
+                        <td width="70px"><span>Hobbies</span></td>
+                        <td>
+                          <select multiple="multiple" class="select2-component">
+                            <option value="Startups">Startups</option>
+                            <option value="Photography">Photography</option>
+                          </select>
+                        </td>
+                        <td width="10px">
+                          <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                        </td>
+                      </tr> 
+                    </table>
+                  </li>
+                  <li>
+                    <table width="100%">
+                      <tr>
+                        <td width="70px"><span>Sports</span></td>
+                        <td>
+                          <select multiple="multiple" class="select2-component">
+                            <option value="Golf">Golf</option>
+                            <option value="Baseball">Baseball</option>
+                            <option value="Football">Football</option>
+                          </select>
+                        </td>
+                        <td width="10px">
+                          <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                        </td>
+                      </tr> 
+                    </table>
+                  </li>
+                  <li>
+                    <table width="100%">
+                      <tr>
+                        <td width="70px"><span>Musics</span></td>
+                        <td>
+                          <select multiple="multiple" class="select2-component">
+                            <option value="Cold Play">Cold Play</option>
+                            <option value="Bon Ive">Bon Ive</option>
+                            <option value="Mom forte & sons">Mom forte & sons</option>
+                          </select>
+                        </td>
+                        <td width="10px">
+                          <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                        </td>
+                      </tr> 
+                    </table>
+                  </li>
+                  <li>
+                    <table width="100%">
+                      <tr>
+                        <td width="70px"><span>Pets</span></td>
+                        <td>
+                          <select multiple="multiple" class="select2-component">
+                            <option value="Dogs">Dogs</option>
+                            <option value="Fish">Fish</option>
+                          </select>
+                        </td>
+                        <td width="10px">
+                          <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                        </td>
+                      </tr> 
+                    </table>
+                  </li>
                 </ul>
               </div>
 
@@ -170,6 +234,7 @@
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
     <script src="js/plugins.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/select2.min.js"></script>
     <script src="js/main.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

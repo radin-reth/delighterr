@@ -82,3 +82,12 @@
 .add-new {
   margin-left: 20px;
 }
+
+/* select2 override style */
+.select2-container {
+  width: 95% !important;
+}
+
+.select2-container * {
+  border: 0 !important;
+}

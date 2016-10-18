@@ -1,0 +1,43 @@
+.navbar {
+  background: #F03800;
+}
+
+#welcome-message {
+  color: white;
+}
+
+.active {
+  background: #d43201;
+}
+
+#chat {
+  background: none;
+  color: white;
+}
+
+.page-title {
+  color: #E74519;
+  font-size: 15px;
+  vertical-align: middle;
+  text-transform: capitalize;
+  padding: 4px 0;
+  margin: 0;
+}
+
+.crud-actions {
+  list-style: none;
+}
+
+.crud-actions > li {
+  float: left;
+  margin-right: 10px;
+}
+
+.btn {
+  text-transform: capitalize;
+}
+
+.btn-primary {
+  background-color: #F03800;
+  border-color: #F03800;
+}

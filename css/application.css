@@ -91,3 +91,11 @@
 .select2-container * {
   border: 0 !important;
 }
+
+.select2-selection__choice,
+.select2-selection__choice__remove {
+  background-color: #E74519 !important;
+  color: white !important;
+}
+
+

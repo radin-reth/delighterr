@@ -79,6 +79,16 @@
   border: 0;
 }
 
+#accordion1 ul {
+  list-style: none;
+}
+
+#accordion1 .nav>li>a:focus, 
+#accordion1 .nav>li>a:hover {
+  background-color: #de9b89;
+  color: white;
+}
+
 .add-new {
   margin-left: 20px;
   color: #E74519;

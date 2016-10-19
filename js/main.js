@@ -1,4 +1,7 @@
 $('.select2-component').select2();
+$('.select2-engagement').select2({
+  placeholder: "Silver Package (default)",
+});
 
 $('.selectpicker').selectpicker({
   style: 'btn-default',

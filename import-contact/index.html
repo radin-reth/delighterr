@@ -116,7 +116,7 @@
                 <p class="hint">
                   Please select a CSV file that is less than 2MB size.
 
-                  <a href="#" class="pull-right">sample file</a>
+                  <a href="#" class="pull-right primary">sample file</a>
                 </p>
 
                 <p class="validate-fn">only CSV file is supported</p>
@@ -130,39 +130,45 @@
                 <h3 class="title">Map file columns to contact Attributes</h3>
                 <p class="validate-fn">we will notify once the file uploaded</p>
 
-                <table>
+                <table class="table" id="map_columns">
                   <tr>
-                    <th>column name</th>
-                    <th>contact attributes</th>
+                    <th>Column Name</th>
+                    <th>Contact Attributes</th>
                   </tr>
                   <tr>
-                    <td>first name</td>
+                    <td>First Name</td>
                     <td>
-                      <select>
+                      <select class="selectpicker" data-width="150px">
                         <option value="1">first name</option>
                         <option value="2">last name</option>
                         <option value="3">home</option>
                       </select>
+
+                      <a href="#" class="btn btn-load">Import</a>
                     </td>
                   </tr>
                   <tr>
-                    <td>first name</td>
+                    <td>Last Name</td>
                     <td>
-                      <select>
+                      <select class="selectpicker" data-width="150px">
                         <option value="1">first name</option>
                         <option value="2">last name</option>
                         <option value="3">home</option>
                       </select>
+
+                      <a href="#" class="btn btn-load">Import</a>
                     </td>
                   </tr>
                   <tr>
-                    <td>first name</td>
+                    <td>Home</td>
                     <td>
-                      <select>
+                      <select class="selectpicker" data-width="150px">
                         <option value="1">first name</option>
                         <option value="2">last name</option>
                         <option value="3">home</option>
                       </select>
+                      
+                      <a href="#" class="btn btn-load">Import</a>
                     </td>
                   </tr> 
                 </table>

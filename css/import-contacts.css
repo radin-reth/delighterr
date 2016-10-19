@@ -34,3 +34,13 @@
   padding: 3px 18px;
   border-radius: 10px;
 }
+
+#map_columns td, 
+#map_columns th {
+  border-top: 0;
+}
+
+.bootstrap-select + .btn-load {
+  padding: 1px 10px;
+  font-size: 13px;
+}

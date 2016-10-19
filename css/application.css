@@ -98,4 +98,20 @@
   color: white !important;
 }
 
+/* bootstrap select override style */
+.bootstrap-select > .btn {
+  padding: 2px 14px;
+  font-size: 12px;
+  color: #888;
+  border-color: #E74519;
+}
 
+.bootstrap-select > .btn:hover {
+  background: #e4bbb0;
+  color: white;
+  text-shadow: none;
+}
+
+.bootstrap-select > .btn .bs-caret {
+  color: #E74519;
+}

@@ -1,3 +1,8 @@
+body,
+.panel {
+  background: #F6F6F6;
+}
+
 .navbar {
   background: #F03800;
 }
@@ -147,9 +152,9 @@
   font-size: 11px;
 
   -webkit-transition: 0.1s ease-in-out;
-    -moz-transition: 0.1s ease-in-out;
-    -o-transition: 0.1s ease-in-out;
-    transition: 0.1s ease-in-out;
+  -moz-transition: 0.1s ease-in-out;
+  -o-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
 }
 
 #accordion1 * {
@@ -157,7 +162,19 @@
 }
 
 .animate {
+  transform: rotate(90deg);
   -ms-transform: rotate(90deg); /* IE 9 */
-    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
-    transform: rotate(90deg);
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+}
+
+/*---*/
+
+.border-primary {
+  border-bottom: 1px solid #E74519;
+  margin: 10px 0 20px 0;
+}
+
+.panel-info {
+  background-color: white;
+  padding: 15px;
 }

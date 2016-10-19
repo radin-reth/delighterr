@@ -20,15 +20,6 @@ body,
   color: white;
 }
 
-.page-title {
-  color: #E74519;
-  font-size: 15px;
-  vertical-align: middle;
-  text-transform: capitalize;
-  padding: 4px 0;
-  margin: 0;
-}
-
 .crud-actions {
   list-style: none;
 }
@@ -47,37 +38,35 @@ body,
   border-color: #F03800;
 }
 
+.primary {
+  color: #E74519;
+}
+
+.separator {
+  border-bottom: 1px solid #E74519;
+  margin: 10px 0 20px 0;
+}
+
+.panel-info {
+  background-color: white;
+  padding: 15px;
+}
+
+.page-title {
+  color: #E74519;
+  font-size: 15px;
+  vertical-align: middle;
+  text-transform: capitalize;
+  padding: 4px 0;
+  margin: 0;
+}
+
 .validate-fn {
   font-size: 13px;
   color: #F03800;
 }
 
-.cart > .title {
-  text-transform: capitalize;
-  font-weight: normal;
-  font-size: 14px;
-  color: #333;
-  border-bottom: 1px solid #F03800;
-  padding: 5px 13px;
-}
-
-.cart > ul {
-  list-style: none;
-  margin: 23px;
-  padding: 0;
-}
-
-.cart > ul > li {
-  border-bottom: 1px solid #ccc;
-  padding: 5px 0;
-  font-size: 12px;
-  color: #999;
-}
-
-.social-icon {
-  margin-right: 12px;
-}
-
+/* sidenav */
 #accordion1 > li {
   margin: 0;
   box-shadow: none;
@@ -99,54 +88,6 @@ body,
   color: white;
 }
 
-.add-new {
-  margin-left: 20px;
-  color: #E74519;
-  font-size: 12px;
-}
-
-.add-new:hover {
-  color: #E74519;
-}
-
-/* select2 override style */
-.select2-container {
-  width: 95% !important;
-}
-
-.select2-container * {
-  border: 0 !important;
-}
-
-.select2-selection__choice,
-.select2-selection__choice__remove {
-  background-color: #E74519 !important;
-  color: white !important;
-}
-
-/* bootstrap select override style */
-.bootstrap-select > .btn {
-  padding: 2px 14px;
-  font-size: 12px;
-  color: #888;
-  border-color: #E74519;
-}
-
-.bootstrap-select > .btn:hover {
-  background: #e4bbb0;
-  color: white;
-  text-shadow: none;
-}
-
-.bootstrap-select > .btn .bs-caret {
-  color: #E74519;
-}
-
-.primary {
-  color: #E74519;
-}
-
-/* css transform */
 #accordion1 .glyphicon-chevron-right {
   margin-top: 3px;
   font-size: 11px;
@@ -167,14 +108,20 @@ body,
   -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
 }
 
-/*---*/
-
-.border-primary {
-  border-bottom: 1px solid #E74519;
-  margin: 10px 0 20px 0;
+/* bootstrap select override style */
+.bootstrap-select > .btn {
+  padding: 2px 14px;
+  font-size: 12px;
+  color: #888;
+  border-color: #E74519;
 }
 
-.panel-info {
-  background-color: white;
-  padding: 15px;
+.bootstrap-select > .btn:hover {
+  background: #e4bbb0;
+  color: white;
+  text-shadow: none;
+}
+
+.bootstrap-select > .btn .bs-caret {
+  color: #E74519;
 }

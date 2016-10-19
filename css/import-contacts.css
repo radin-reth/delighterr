@@ -1,0 +1,36 @@
+.title {
+  border-bottom: 1px solid red;
+  padding: 5px 0;
+  font-size: 17px;
+  max-width: 82%;
+}
+
+.hint {
+  color: #888;
+}
+
+.search-file {
+  border: 0;
+}
+
+.search-wrapper {
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 2px 5px 3px 12px;
+  width: 70%;
+}
+
+.search-wrapper > .glyphicon-search {
+  vertical-align: middle;
+  margin-right: 5px;
+  margin-bottom: 3px;
+  color: #777;
+}
+
+.btn-load {
+  background-color: #E74519;
+  color: white;
+  padding: 3px 18px;
+  border-radius: 10px;
+}

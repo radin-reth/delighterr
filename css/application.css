@@ -79,6 +79,11 @@
   border: 0;
 }
 
+#accordion1 > li > ul > li {
+  font-size: 13px;
+  margin: 12px 0;
+}
+
 #accordion1 ul {
   list-style: none;
 }
@@ -134,4 +139,25 @@
 
 .primary {
   color: #E74519;
+}
+
+/* css transform */
+#accordion1 .glyphicon-chevron-right {
+  margin-top: 3px;
+  font-size: 11px;
+
+  -webkit-transition: 0.1s ease-in-out;
+    -moz-transition: 0.1s ease-in-out;
+    -o-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+}
+
+#accordion1 * {
+  color: #555;
+}
+
+.animate {
+  -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
 }

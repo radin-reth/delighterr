@@ -49,7 +49,7 @@ body,
 
 .separator {
   border-bottom: 1px solid #E74519;
-  margin: 10px 0 20px 0;
+  margin: 10px 0 0 0;
 }
 
 .panel-info {
@@ -58,8 +58,8 @@ body,
 }
 
 .page-title {
-  color: #E74519;
-  font-size: 15px;
+  color: #333;
+  font-size: 18px;
   vertical-align: middle;
   text-transform: capitalize;
   padding: 4px 0;

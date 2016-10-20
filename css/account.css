@@ -1,0 +1,19 @@
+.input-field {
+  border: 0;
+  box-shadow: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+}
+
+.input-field:focus {
+  box-shadow: none;
+}
+
+.cart {
+  padding: 30px;
+}
+
+#form .label-name {
+  font-weight: normal;
+  text-align: left;
+}

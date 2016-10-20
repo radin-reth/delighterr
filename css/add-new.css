@@ -52,3 +52,15 @@
 #family_name .entry-wrapper > input {
   font-size: 12px;
 }
+
+/* Override typehead */
+.twitter-typeahead {
+  width: 100%;
+}
+
+.tt-dropdown-menu {
+  background: white;
+  padding: 15px;
+  border: 1px solid #ccc;
+  width: 70%;
+}

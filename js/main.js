@@ -8,12 +8,25 @@ $('.selectpicker').selectpicker({
   size: false
 });
 
-// $('#accordion1').on('show.bs.collapse', function () {
-//   debugger;
-// })
-
 $('.collapse').on('show.bs.collapse', function() {
   $(this).parent().find(".glyphicon-chevron-right").addClass("animate");
 }).on('hide.bs.collapse', function(){
   $(this).parent().find(".glyphicon-chevron-right").removeClass("animate");
+});
+
+
+var addressPicker = new AddressPicker();
+
+$('#home').typeahead(null, {
+  displayKey: 'description',
+  source: addressPicker.ttAdapter()
+});
+
+$(window).load(function()
+{
+   var phones = [{ "mask": "(###) ###-####"}, { "mask": "(###)### - ####"}];
+    $('#phone').inputmask({ 
+        mask: phones, 
+        greedy: false, 
+        definitions: { '#': { validator: "[0-9]", cardinality: 1}} });
 });

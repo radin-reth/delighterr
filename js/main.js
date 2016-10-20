@@ -30,3 +30,7 @@ $(window).load(function()
         greedy: false, 
         definitions: { '#': { validator: "[0-9]", cardinality: 1}} });
 });
+
+$('.date-picker').datepicker({
+    format: "MM dd, yyyy"
+});

@@ -64,3 +64,8 @@
   border: 1px solid #ccc;
   width: 70%;
 }
+
+.date-picker {
+  font-size: 12px;
+  color: #F03800;
+}

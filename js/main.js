@@ -34,3 +34,8 @@ $(window).load(function()
 $('.date-picker').datepicker({
     format: "MM dd, yyyy"
 });
+
+$('#save').on('click', function(){
+  if($('#name').val() == "") $('.error-fn').removeClass('hide');
+  if($('#email').val() == "") $('.error-email').removeClass('hide');
+});

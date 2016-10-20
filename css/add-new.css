@@ -13,7 +13,7 @@
   padding: 0;
 }
 
-.cart > ul > li {
+.cart > ul > li:not(.input-wrapper) {
   border-bottom: 1px solid #ccc;
   padding: 5px 0;
   font-size: 12px;
@@ -47,4 +47,8 @@
 .select2-selection__choice__remove {
   background-color: #E74519 !important;
   color: white !important;
+}
+
+#family_name .entry-wrapper > input {
+  font-size: 12px;
 }

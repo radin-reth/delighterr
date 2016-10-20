@@ -79,7 +79,7 @@
                 </a>
                 <ul id="firstLink" class="collapse">
                     <li><a href="../">Add New</a></li>
-                    <li><a href="/import-contact">Import Contacts</a></li>
+                    <li class="active-nav"><a href="../import-contact">Import Contacts</a></li>
                 </ul>
               </li>
 
@@ -95,7 +95,7 @@
                     <li>SubTest2</li>
                 </ul>
               </li>
-              <li>
+              <li class="panel">
                 <a href="#">
                   Referrals
                 </a>
@@ -187,6 +187,10 @@
     <script src="../js/select2.min.js"></script>
     <script src="../js/bootstrap-select.min.js"></script>
     <script src="../js/main.js"></script>
+
+    <script type="text/javascript">
+      $('#firstLink').collapse('show');
+    </script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

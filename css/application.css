@@ -160,3 +160,15 @@ body,
 .bootstrap-select > .btn .bs-caret {
   color: #E74519;
 }
+
+/*split content*/
+@media screen and (min-width: 768px) {
+  #accordion1 {
+    margin-top: 44px;
+    border-top: 1px solid #F03800;
+  }
+}
+
+.no-padding {
+  padding: 0;
+}

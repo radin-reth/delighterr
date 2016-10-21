@@ -59,19 +59,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-sm-8 col-md-7 col-md-offset-2">
-          <p class="page-title">create new contact</p>
-        </div>
-        <div class="col-xs-6 col-sm-4 col-md-3">
-          <ul class="crud-actions">
-            <li><a class="btn btn-primary btn-sm" href="#" role="button" id="save">save</a></li>
-            <li><a class="btn btn-default btn-sm" href="#" role="button">cancel</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="row"><hr class="separator"></hr></div>
-      <div class="row">
-        <div class="col-sm-4 col-md-2">
+        <div class="col-sm-4 col-md-2 no-padding">
           <ul class="nav nav-stacked" id="accordion1">
               <li class="panel"> 
                 <a data-toggle="collapse" data-parent="#accordion1" href="#firstLink">
@@ -111,8 +99,22 @@
           </ul>
         </div>
 
-        <div class="col-sm-8 col-md-10 panel-info">
+        <div class="col-sm-8 col-md-10">
           <div class="row">
+            <div class="col-xs-6">
+              <p class="page-title">create new contact</p>
+            </div>
+
+            <div class="col-xs-6">
+              <ul class="crud-actions">
+                <li><a class="btn btn-primary btn-sm" href="#" role="button" id="save">save</a></li>
+                <li><a class="btn btn-default btn-sm" href="#" role="button">cancel</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="row"><hr class="separator"></hr></div>
+          <div class="row panel-info">
             <div class="col-xs-12">
               <p class="validate-fn hide error-fn">First name is required.</p>
               <p class="validate-fn hide error-email">Email is required.</p>

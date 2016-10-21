@@ -1,8 +1,16 @@
+.panel-info {
+  padding: 30px;
+}
+
 .title {
   border-bottom: 1px solid red;
   padding: 5px 0;
   font-size: 17px;
   max-width: 82%;
+}
+
+.validate-fn {
+  margin: 24px 0;
 }
 
 .hint {
@@ -11,6 +19,15 @@
 
 .search-file {
   border: 0;
+  width: 90%;
+}
+
+.search-file:focus {
+  outline: none;
+}
+
+.map-file {
+  margin-top: 70px;
 }
 
 .search-wrapper {

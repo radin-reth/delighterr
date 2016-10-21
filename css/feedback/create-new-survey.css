@@ -6,7 +6,7 @@
 }
 
 .title {
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid #E74519;
   padding: 5px 0;
   font-weight: normal;
   font-size: 15px;
@@ -18,7 +18,7 @@
     font-weight: normal;
 }
 .btn-check {
-  border-color: red;
+  border-color: #E74519;
     font-weight: normal;
     font-size: 10px;
     border-radius: 7px;
@@ -26,7 +26,7 @@
     
 }
 .btn-check span {
-  color: red;
+  color: #E74519;
 }
 .input-scale {
   width: 70%;
@@ -84,10 +84,10 @@
 }
 .generate-input > .search-wrapper{
   padding: 0;
-    border-color: red;
+    border-color: #E74519;
 }
 .generate-input > .search-wrapper > span {
-  background: red;
+  background: #E74519;
     display: inline-block;
     color: white;
     border-radius: 7px 0 0 7px;

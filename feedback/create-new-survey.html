@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-datepicker.min.css">
 
     <link rel="stylesheet" type="text/css" href="../css/application.css">
-    <link rel="stylesheet" type="text/css" href="../css/referrals/add-new.css">
+    <link rel="stylesheet" type="text/css" href="../css/feedback/create-new-survey.css">
     <script src="../js/vendor/modernizr-2.8.3.min.js"></script>
   </head>
   <body>
@@ -60,13 +60,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-6 col-sm-8 col-md-7 col-md-offset-2">
-          <p class="page-title">Add new Referral</p>
-        </div>
-        <div class="col-xs-6 col-sm-4 col-md-3">
-          <ul class="crud-actions">
-            <li><a class="btn btn-primary btn-sm" href="#" role="button">save</a></li>
-            <li><a class="btn btn-default btn-sm" href="#" role="button">cancel</a></li>
-          </ul>
+          <p class="page-title">New Feedback Survey</p>
         </div>
       </div>
       <div class="row"><hr class="separator"></hr></div>
@@ -114,46 +108,56 @@
         <div class="col-sm-8 col-md-10 panel-info">
           <div class="row">
             <div class="col-xs-12">
-              <p class="validate-fn">Reffered by</p>
+              <p class="validate-fn">Select Feedback questions and add contacts to send a survey</p>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-8">
               <div class="cart">
-                <form class="form-horizontal">
-                  <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-3 control-label label-name">Referral</label>
+                <h3 class="title">Select CSV File</h3>
+                <p class="hint">Please select a CSV file that is less than 2MB size.</p>
 
-                    <div class="col-sm-9">
-                      <div class="search-wrapper">
-                        <span class="glyphicon glyphicon-search"></span>
-                        <input type="text" placeholder="search contacts" class="search-file">
-                      </div>
-
-                      <!-- <input type="email" class="form-control" id="inputEmail3" placeholder="Email"> -->
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-3 control-label label-name">Referred by</label>
-
-                    <div class="col-sm-9">
-                      <div class="search-wrapper">
-                        <span class="glyphicon glyphicon-search"></span>
-                        <input type="text" placeholder="search contacts" class="search-file">
-                      </div>
-                    </div>
+                <div class="action">
+                  <div class="scale">
+                    <button class="btn btn-default btn-check">
+                      <span class="glyphicon glyphicon-ok"></span>
+                    </button>
+                    <input type="text" class="form-control input-scale" id="scale" value="How likely is it that you would recommend Baker Nanduru to a friend or colleague?">
+                    <span class="primary">scale 1 - 10</span>
                   </div>
 
-                  <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-3 control-label label-name">Referred Date</label>
-
-                    <div class="col-sm-9">
-                      <div class="search-wrapper">
-                        <span class="glyphicon glyphicon-calendar primary"></span>
-                        <input type="text" placeholder="Pick a date" class="search-file date-picker">
-                      </div>
-                    </div>
+                  <div class="scale">
+                    <button class="btn btn-default btn-check">
+                      <span class="glyphicon glyphicon-ok"></span>
+                    </button>
+                    <input type="text" class="form-control input-scale">
+                    <span class="primary">free form text</span>
                   </div>
-                </form>
+                </div>
+
+                <h3 class="title">Add Contacts</h3>
+                <div class="search-wrapper">
+                  <span class="glyphicon glyphicon-search"></span>
+                  <input type="text" placeholder="search file" class="search-contact">
+                </div>
+                <a href="#" class="btn btn-load pull-right">Load</a>
+
+                <ul class="search-list">
+                  <li><span class="glyphicon glyphicon-remove"></span>Lucy Guo</li>
+                  <li><span class="glyphicon glyphicon-remove"></span>Baker Nanduru</li>
+                </ul>
+
+                <div class="generate-url">
+                  <div class="generate-input">
+                    <div class="search-wrapper">
+                      <span>Generate Survey URL</span>
+                      <input type="text" value="www.delighterr.com/survey/matt_silverman0192847329103" class="input-generate">
+                    </div>
+                  <button class="btn btn-load pull-right">Email</button>
+                    <button class="btn btn-load pull-right">Copy</button>
+                  </div>
+
+                  
+                </div>
               </div>
             </div>
           </div>

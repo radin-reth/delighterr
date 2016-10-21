@@ -59,19 +59,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-sm-8 col-md-7 col-md-offset-2">
-          <p class="page-title">Add new Referral</p>
-        </div>
-        <div class="col-xs-6 col-sm-4 col-md-3">
-          <ul class="crud-actions">
-            <li><a class="btn btn-primary btn-sm" href="#" role="button">save</a></li>
-            <li><a class="btn btn-default btn-sm" href="#" role="button">cancel</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="row"><hr class="separator"></hr></div>
-      <div class="row">
-        <div class="col-sm-4 col-md-2">
+        <div class="col-sm-4 col-md-2 no-padding">
           <ul class="nav nav-stacked" id="accordion1">
               <li class="panel"> 
                 <a data-toggle="collapse" data-parent="#accordion1" href="#firstLink">
@@ -111,13 +99,27 @@
           </ul>
         </div>
 
-        <div class="col-sm-8 col-md-10 panel-info">
+        <div class="col-sm-8 col-md-10">
           <div class="row">
+            <div class="col-xs-6 col-md-8">
+              <p class="page-title">add new referral</p>
+            </div>
+
+            <div class="col-xs-6 col-md-4">
+              <ul class="crud-actions">
+                <li><a class="btn btn-primary btn-sm" href="#" role="button" id="save">save</a></li>
+                <li><a class="btn btn-default btn-sm" href="#" role="button">cancel</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="row"><hr class="separator"></hr></div>
+          <div class="row panel-info">
             <div class="col-xs-12">
               <p class="validate-fn">Reffered by</p>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-8">
               <div class="cart">
                 <form class="form-horizontal">
                   <div class="form-group">
@@ -163,13 +165,23 @@
 
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.10.4/dist/typeahead.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead-addresspicker/0.1.4/typeahead-addresspicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.62/jquery.inputmask.bundle.js"></script>
+
     <script src="../js/plugins.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/select2.min.js"></script>
     <script src="../js/bootstrap-select.min.js"></script>
     <script src="../js/bootstrap-datepicker.min.js"></script>
-    <script src="../js/referral.js"></script>
 
+
+    
+
+    <script src="../js/main.js"></script>
     <script type="text/javascript">
       $('#referrals').collapse('show');
     </script>

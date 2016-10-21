@@ -17,9 +17,10 @@
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/select2.min.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-datepicker.min.css">
 
     <link rel="stylesheet" type="text/css" href="../css/application.css">
-    <link rel="stylesheet" type="text/css" href="../css/account.css">
+    <link rel="stylesheet" type="text/css" href="../css/add-new.css">
     <script src="../js/vendor/modernizr-2.8.3.min.js"></script>
   </head>
   <body>
@@ -58,19 +59,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-sm-8 col-md-7 col-md-offset-2">
-          <p class="page-title">Account</p>
-        </div>
-        <div class="col-xs-6 col-sm-4 col-md-3">
-          <ul class="crud-actions">
-            <li><a class="btn btn-primary btn-sm" href="#" role="button">save</a></li>
-            <li><a class="btn btn-default btn-sm" href="#" role="button">cancel</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="row"><hr class="separator"></hr></div>
-      <div class="row">
-        <div class="col-sm-4 col-md-2">
+        <div class="col-sm-4 col-md-2 no-padding">
           <ul class="nav nav-stacked" id="accordion1">
               <li class="panel"> 
                 <a data-toggle="collapse" data-parent="#accordion1" href="#firstLink">
@@ -79,7 +68,7 @@
                 </a>
                 <ul id="firstLink" class="collapse">
                     <li><a href="../">Add New</a></li>
-                    <li><a href="../import-contact">Import Contacts</a></li>
+                    <li><a href="/import-contact">Import Contacts</a></li>
                 </ul>
               </li>
 
@@ -89,7 +78,7 @@
                   <span class="glyphicon glyphicon-chevron-right pull-right"></span>
                 </a>
                 <ul id="secondLink" class="collapse">
-                    <li><a href="../feedback/create-new-survey.html">Create New Survey</a></li>
+                    <li><a href="feedback/create-new-survey.html">Create New Survey</a></li>
                 </ul>
               </li>
               <li class="panel">
@@ -99,67 +88,79 @@
                 </a>
 
                 <ul id="referrals" class="collapse">
-                    <li><a href="../referrals/add-new.html">Add New</a></li>
+                    <li><a href="/referrals/add-new.html">Add New</a></li>
                 </ul>
               </li>
-              <li>
-                <a href="#" class="active-nav">
+              <li class="active-nav">
+                <a href="account">
                   Account
                 </a>
               </li>
           </ul>
         </div>
 
-        <div class="col-sm-8 col-md-10 panel-info">
+        <div class="col-sm-8 col-md-10">
           <div class="row">
-            <div class="col-md-12">
-              <div class="cart">
-                <form class="form-horizontal" id="form">
-                  <div class="form-group">
-                    <label for="status" class="col-sm-3 control-label label-name">Status</label>
+            <div class="col-xs-6 col-md-8">
+              <p class="page-title">account</p>
+            </div>
 
-                    <div class="col-sm-4">
-                      <input type="text" class="form-control input-field" id="status" value="Trial">
-                    </div>
+            <div class="col-xs-6 col-md-4">
+              <ul class="crud-actions">
+                <li><a class="btn btn-primary btn-sm" href="#" role="button" id="save">save</a></li>
+                <li><a class="btn btn-default btn-sm" href="#" role="button">cancel</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="row"><hr class="separator"></hr></div>
+          <div class="row panel-info">
+            <div class="cart">
+              <form class="form-horizontal" id="form">
+                <div class="form-group">
+                  <label for="status" class="col-sm-3 control-label label-name">Status</label>
+
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control input-field" id="status" value="Trial">
                   </div>
-                  <div class="form-group">
-                    <label for="first_name" class="col-sm-3 control-label label-name">First Name</label>
+                </div>
+                <div class="form-group">
+                  <label for="first_name" class="col-sm-3 control-label label-name">First Name</label>
 
-                    <div class="col-sm-4">
-                      <input type="text" class="form-control input-field" id="first_name" value="Baker">
-                    </div>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control input-field" id="first_name" value="Baker">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="last_name" class="col-sm-3 control-label label-name">Last Name</label>
+
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control input-field" id="last_name" value="Baker_Nanduru@agooglecompany.com">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="company" class="col-sm-3 control-label label-name">Company</label>
+
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control input-field" id="company" value="A Google Company">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="logo" class="col-sm-3 control-label label-name">Company Logo URL</label>
+
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control input-field" id="logo" value="http://bit.ly/2e6pjBP">
                   </div>
 
-                  <div class="form-group">
-                    <label for="last_name" class="col-sm-3 control-label label-name">Last Name</label>
-
-                    <div class="col-sm-4">
-                      <input type="text" class="form-control input-field" id="last_name" value="Baker_Nanduru@agooglecompany.com">
-                    </div>
+                  <div class="col-sm-5">
+                    <img src="../img/default-image.png" width="40">
+                    <span class="recommendation">(Recommended Size: 640 x 480 pixels)</span>
                   </div>
-
-                  <div class="form-group">
-                    <label for="company" class="col-sm-3 control-label label-name">Company</label>
-
-                    <div class="col-sm-4">
-                      <input type="text" class="form-control input-field" id="company" value="A Google Company">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="logo" class="col-sm-3 control-label label-name">Company Logo URL</label>
-
-                    <div class="col-sm-4">
-                      <input type="text" class="form-control input-field" id="logo" value="http://bit.ly/2e6pjBP">
-                    </div>
-
-                    <div class="col-sm-5">
-                      <img src="../img/default-image.png" width="40">
-                      <span class="recommendation">(Recommended Size: 640 x 480 pixels)</span>
-                    </div>
-                  </div>
-                </form>
-              </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -168,10 +169,18 @@
 
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.10.4/dist/typeahead.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead-addresspicker/0.1.4/typeahead-addresspicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.62/jquery.inputmask.bundle.js"></script>
+
     <script src="../js/plugins.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/select2.min.js"></script>
     <script src="../js/bootstrap-select.min.js"></script>
+    <script src="../js/bootstrap-datepicker.min.js"></script>
     <script src="../js/main.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

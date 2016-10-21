@@ -59,13 +59,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-sm-8 col-md-7 col-md-offset-2">
-          <p class="page-title">New Feedback Survey</p>
-        </div>
-      </div>
-      <div class="row"><hr class="separator"></hr></div>
-      <div class="row">
-        <div class="col-sm-4 col-md-2">
+        <div class="col-sm-4 col-md-2 no-padding">
           <ul class="nav nav-stacked" id="accordion1">
               <li class="panel"> 
                 <a data-toggle="collapse" data-parent="#accordion1" href="#firstLink">
@@ -94,7 +88,7 @@
                 </a>
 
                 <ul id="referrals" class="collapse">
-                    <li class="active-nav"><a href="../referrals/add-new.html">Add New</a></li>
+                    <li><a href="../referrals/add-new.html">Add New</a></li>
                 </ul>
               </li>
               <li>
@@ -105,8 +99,15 @@
           </ul>
         </div>
 
-        <div class="col-sm-8 col-md-10 panel-info">
+        <div class="col-sm-8 col-md-10">
           <div class="row">
+            <div class="col-xs-6 col-md-8">
+              <p class="page-title">New Feedback Survey</p>
+            </div>
+          </div>
+          
+          <div class="row"><hr class="separator"></hr></div>
+          <div class="row panel-info">
             <div class="col-xs-12">
               <p class="validate-fn">Select Feedback questions and add contacts to send a survey</p>
             </div>
@@ -137,7 +138,7 @@
                 <h3 class="title">Add Contacts</h3>
                 <div class="search-wrapper">
                   <span class="glyphicon glyphicon-search"></span>
-                  <input type="text" placeholder="search file" class="search-contact">
+                  <input type="text" placeholder="Search contacts" class="search-contact">
                 </div>
                 <a href="#" class="btn btn-load pull-right">Load</a>
 
@@ -167,13 +168,23 @@
 
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.10.4/dist/typeahead.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead-addresspicker/0.1.4/typeahead-addresspicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.62/jquery.inputmask.bundle.js"></script>
+
     <script src="../js/plugins.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/select2.min.js"></script>
     <script src="../js/bootstrap-select.min.js"></script>
     <script src="../js/bootstrap-datepicker.min.js"></script>
-    <script src="../js/referral.js"></script>
 
+
+    
+
+    <script src="../js/main.js"></script>
     <script type="text/javascript">
       $('#secondLink').collapse('show');
     </script>

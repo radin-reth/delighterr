@@ -18,6 +18,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/application.css">
     <link rel="stylesheet" type="text/css" href="css/survey-webpage.css">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
   </head>
   <body>
@@ -28,43 +29,34 @@
     <div class="container">
       <header>
         <div class="image">
-          <img src="img/default-image.png" alt="default image">
+          <img src="img/default-image.png" alt="default image" width="111">
         </div>
 
         <h1 class="title">customer feedback survey</h1>
       </header>
 
-      <hr class="separator">
-
       <div class="row">
-        <div class="col-xs-12 col-md-9">
-          <table class="table">
-            <tr>
-              <td>
-              </td>
-                
-              <td>
-                <p>It has been great serving you. I would like to get your feedback.</p>
-                <p>Marcus</p>
-              </td>
-            </tr>
+        <div class="col-xs-12">
+          <div class="content">
+            <form id="survey">
+              <p class="intro">It has been great serving you. I would like to get your feedback.</p>
 
-            <tr>
-              <td class="vertical-middle">
-                <span class="required-lable hidden-xs">* required</span>
-              </td>
-              <td>
+              <div class="email cart">
                 <div class="input-wrapper">
                   <input type="text" class="form-control email" placeholder="Enter your email">
                   <img src="img/check.png" class="check">
                 </div>
-                <span class="required-lable visible-xs">* required</span>
-              </td>
-            </tr>
-            <tr>
-              <td><span class="required-lable hidden-xs">* required</span></td>
-              <td>
-                <p>On a scale of 1 to 10, how likely would you recommend our company to yuor friend or colleague</p>
+
+                <p class="required-lable">* required</p>
+                <div class="clearfix"></div>
+              </div>
+
+              <div class="rating cart">
+                <p>
+                  On a scale of 1 to 10, how likely would you recommend our company to yuor friend or colleague
+                  <span class="required-lable">*</span>
+                </p>
+
                 <div class="rate">
                   <div class="btn-group" role="group" aria-label="rate">
                     <button type="button" class="btn btn-default">1</button>
@@ -78,26 +70,21 @@
                     <button type="button" class="btn btn-default">9</button>
                     <button type="button" class="btn btn-default">10</button>
                   </div>
+
                   <div class="rating-labels">
                     <span>Least Likely</span>
                     <span class="pull-right">Most Likely</span>
                   </div>
                 </div>
-                <span class="required-lable visible-xs">* required</span>
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>
-                <hr class="border">
+              </div>
+
+              <div class="comment cart">
                 <p>I would appreciate any additional comments</p>
                 <textarea rows="4" placeholder="Enter comments here" class="comments"></textarea>
-              </td>
-            </tr>
-          </table>
-          
-          <div class="text-center">
-            <input type="submit" value="Submit" class="btn btn-submit">
+              </div>
+
+              <input type="submit" value="Submit" class="btn btn-submit">
+            </form>
           </div>
         </div>
       </div>
@@ -108,8 +95,9 @@
 
     <script src="js/plugins.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
-    <script src="js/main.js"></script>
+    <script src="js/survey.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

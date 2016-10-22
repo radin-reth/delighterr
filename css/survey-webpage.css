@@ -11,7 +11,7 @@ body {
   border-bottom: 1px solid #E74519;
 }
 .title {
-  font-size: 23px;
+  font-size: 22px;
     text-transform: capitalize;
     color: #E74519;
     font-weight: normal;
@@ -20,9 +20,10 @@ body {
 .required-lable {
   color: #E74519;
   text-transform: capitalize;
+  margin-top: 10px;
 }
 
-header{
+.content, header {
   width: 85%;
   margin: 0 auto;
 }
@@ -30,13 +31,16 @@ header{
 .input-wrapper {
   display: inline-block;
     border-bottom: 1px solid #ccc;
-    width: 70%;
+    width: 35%;
 }
-
+.comment {
+  width: 60%;
+  margin-top: 40px !important;
+}
 .email {
   border: 0;
     width: 88%;
-    display: inline;
+    display: inline-block;
     box-shadow: none;
     padding-left: 0;
 }
@@ -54,9 +58,7 @@ header{
 .table>tbody>tr>td {
   border: 0;
 }
-.border {
-  border-top: 1px solid #ddd !important;
-}
+
 .table>tbody>tr>td.vertical-middle {
   vertical-align: middle;
 }
@@ -64,4 +66,10 @@ header{
   background: #E74519;
   color: white;
   margin-bottom: 40px;
+}
+.intro {
+  margin: 20px 0 15px 0;
+}
+.cart {
+  margin: 20px 0;
 }

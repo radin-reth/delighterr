@@ -1,3 +1,7 @@
+.align-top {
+  vertical-align: top;
+}
+
 .panel-info {
   padding: 30px;
 }

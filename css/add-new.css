@@ -1,3 +1,16 @@
+.label-name {
+  font-weight: normal;
+  text-align: left;
+  margin-top: 7px;
+  padding: 0;
+  text-transform: capitalize;
+}
+
+.cart {
+  clear: both;
+  margin-bottom: 50px;
+}
+
 .cart > .title {
   text-transform: capitalize;
   font-weight: normal;

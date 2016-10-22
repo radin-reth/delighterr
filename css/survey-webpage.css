@@ -1,0 +1,72 @@
+body {
+  background: white;
+}
+.comments {
+  width: 100%;
+  border-color: #8a8a8a;
+  border-radius: 4px;
+  padding: 10px;
+}
+.separator {
+  border-bottom: 1px solid #E74519;
+}
+.title {
+  font-size: 23px;
+    text-transform: capitalize;
+    color: #E74519;
+    font-weight: normal;
+}
+
+.required-lable {
+  color: #E74519;
+  text-transform: capitalize;
+}
+
+header{
+  width: 85%;
+  margin: 0 auto;
+}
+
+.input-wrapper {
+  display: inline-block;
+    border-bottom: 1px solid #ccc;
+    width: 70%;
+}
+
+.email {
+  border: 0;
+    width: 88%;
+    display: inline;
+    box-shadow: none;
+    padding-left: 0;
+}
+.check {
+  width: 14px;
+}
+.rate {
+  display: inline-block;
+}
+.rating-labels {
+  color: #E74519;
+  margin-top: 5px;
+    font-size: 12px;
+}
+.table>tbody>tr>td {
+  border: 0;
+}
+.border {
+  border-top: 1px solid #ddd !important;
+}
+.table>tbody>tr>td.vertical-middle {
+  vertical-align: middle;
+}
+.btn-submit {
+  background: #E74519;
+  color: white;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .btn-submit {
+    margin-right: 15%;
+  }
+}

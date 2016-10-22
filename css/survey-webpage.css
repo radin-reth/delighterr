@@ -3,7 +3,7 @@ body {
 }
 .comments {
   width: 100%;
-  border-color: #8a8a8a;
+  border-color: #ddd;
   border-radius: 4px;
   padding: 10px;
 }
@@ -64,9 +64,4 @@ header{
   background: #E74519;
   color: white;
   margin-bottom: 40px;
-}
-@media screen and (min-width: 768px) {
-  .btn-submit {
-    margin-right: 15%;
-  }
 }

@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="../css/select2.min.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-select.min.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
     <link rel="stylesheet" type="text/css" href="../css/application.css">
     <link rel="stylesheet" type="text/css" href="../css/add-new.css">
@@ -100,23 +101,26 @@
         </div>
 
         <div class="col-sm-8 col-md-10">
-          <div class="row">
-            <div class="col-xs-6 col-md-8">
-              <p class="page-title">account</p>
-            </div>
+          <form class="form-horizontal formEle" id="form">
+            <div class="row">
+              <div class="col-xs-6 col-md-8">
+                <p class="page-title">account</p>
+              </div>
 
-            <div class="col-xs-6 col-md-4">
-              <ul class="crud-actions">
-                <li><a class="btn btn-primary btn-sm" href="#" role="button" id="save">save</a></li>
-                <li><a class="btn btn-default btn-sm" href="#" role="button">cancel</a></li>
-              </ul>
+              <div class="col-xs-6 col-md-4">
+                <ul class="crud-actions">
+                  <li>
+                    <input type="submit" value="Save" class="btn btn-primary btn-sm" id="save" data-label="Your account">
+                  </li>
+                  <li><a class="btn btn-default btn-sm" href="#" role="button">cancel</a></li>
+                </ul>
+              </div>
             </div>
-          </div>
-          
-          <div class="row"><hr class="separator"></hr></div>
-          <div class="row panel-info">
-            <div class="cart">
-              <form class="form-horizontal" id="form">
+            
+            <div class="row"><hr class="separator"></hr></div>
+            <div class="row panel-info">
+              <div class="cart">
+                
                 <div class="form-group">
                   <label for="status" class="col-sm-3 control-label label-name">Status</label>
 
@@ -160,9 +164,9 @@
                     <span class="recommendation">(Recommended Size: 640 x 480 pixels)</span>
                   </div>
                 </div>
-              </form>
+              </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
@@ -175,6 +179,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.10.4/dist/typeahead.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead-addresspicker/0.1.4/typeahead-addresspicker.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.62/jquery.inputmask.bundle.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
 
     <script src="../js/plugins.js"></script>
     <script src="../js/bootstrap.min.js"></script>

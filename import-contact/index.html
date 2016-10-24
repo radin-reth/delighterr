@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="../css/select2.min.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-select.min.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
     <link rel="stylesheet" type="text/css" href="../css/application.css">
     <link rel="stylesheet" type="text/css" href="../css/import-contacts.css">
@@ -59,128 +60,132 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-sm-4 col-md-2 no-padding">
-          <ul class="nav nav-stacked" id="accordion1">
-              <li class="panel"> 
-                <a data-toggle="collapse" data-parent="#accordion1" href="#firstLink">
-                  Contacts
-                  <span class="glyphicon glyphicon-chevron-right pull-right"></span>
-                </a>
-                <ul id="firstLink" class="collapse">
-                    <li><a href="../">Add New</a></li>
-                    <li class="active-nav"><a href="../import-contact">Import Contacts</a></li>
-                </ul>
-              </li>
+        <form class="formEle">
+          <div class="col-sm-4 col-md-2 no-padding">
+            <ul class="nav nav-stacked" id="accordion1">
+                <li class="panel"> 
+                  <a data-toggle="collapse" data-parent="#accordion1" href="#firstLink">
+                    Contacts
+                    <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+                  </a>
+                  <ul id="firstLink" class="collapse">
+                      <li><a href="../">Add New</a></li>
+                      <li class="active-nav"><a href="../import-contact">Import Contacts</a></li>
+                  </ul>
+                </li>
 
-              <li class="panel"> 
-                <a data-toggle="collapse" data-parent="#accordion1" href="#secondLink">
-                  Feedback
-                  <span class="glyphicon glyphicon-chevron-right pull-right"></span>
-                </a>
-                <ul id="secondLink" class="collapse">
-                    <li><a href="../feedback/create-new-survey.html">Create New Survey</a></li>
-                </ul>
-              </li>
-              <li class="panel">
-                <a data-toggle="collapse" data-parent="#accordion1" href="#referrals">
-                  Referrals
-                  <span class="glyphicon glyphicon-chevron-right pull-right"></span>
-                </a>
+                <li class="panel"> 
+                  <a data-toggle="collapse" data-parent="#accordion1" href="#secondLink">
+                    Feedback
+                    <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+                  </a>
+                  <ul id="secondLink" class="collapse">
+                      <li><a href="../feedback/create-new-survey.html">Create New Survey</a></li>
+                  </ul>
+                </li>
+                <li class="panel">
+                  <a data-toggle="collapse" data-parent="#accordion1" href="#referrals">
+                    Referrals
+                    <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+                  </a>
 
-                <ul id="referrals" class="collapse">
-                    <li><a href="..//referrals/add-new.html">Add New</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="../account">
-                  Account
-                </a>
-              </li>
-          </ul>
-        </div>
-
-        <div class="col-sm-8 col-md-10">
-          <div class="row">
-            <div class="col-xs-6 col-md-8">
-              <p class="page-title">import contacts</p>
-            </div>
-
-            <div class="col-xs-6 col-md-4">
-              <ul class="crud-actions">
-                <li><a class="btn btn-primary btn-sm" href="#" role="button" id="save">import</a></li>
-                <li><a class="btn btn-default btn-sm" href="#" role="button">cancel</a></li>
-              </ul>
-            </div>
+                  <ul id="referrals" class="collapse">
+                      <li><a href="../referrals/add-new.html">Add New</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../account">
+                    Account
+                  </a>
+                </li>
+            </ul>
           </div>
-          
-          <div class="row"><hr class="separator"></hr></div>
-          <div class="row panel-info">
-            <div class="col-md-7">
-              <div class="cart">
-                <h3 class="title">Select CSV File</h3>
-                <p class="hint">
-                  Please select a CSV file that is less than 2MB size.
 
-                  <a href="#" class="pull-right primary">sample file</a>
-                </p>
+          <div class="col-sm-8 col-md-10">
+            <div class="row">
+              <div class="col-xs-6 col-md-8">
+                <p class="page-title">import contacts</p>
+              </div>
 
-                <p class="validate-fn">Only CSV file is supported</p>
+              <div class="col-xs-6 col-md-4">
+                <ul class="crud-actions">
+                  <li>
+                    <input type="submit" value="Import" class="btn btn-primary btn-sm" id="save" data-label="Your import">
+                  </li>
+                  <li><a class="btn btn-default btn-sm" href="#" role="button">cancel</a></li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="row"><hr class="separator"></hr></div>
+            <div class="row panel-info">
+              <div class="col-md-7">
+                <div class="cart">
+                  <h3 class="title">Select CSV File</h3>
+                  <p class="hint">
+                    Please select a CSV file that is less than 2MB size.
 
-                <div class="search-wrapper">
-                  <span class="glyphicon glyphicon-search"></span>
-                  <input type="text" placeholder="search file" class="search-file">
+                    <a href="#" class="pull-right primary">sample file</a>
+                  </p>
+
+                  <p class="validate-fn">Only CSV file is supported</p>
+
+                  <div class="search-wrapper">
+                    <span class="glyphicon glyphicon-search"></span>
+                    <input type="text" placeholder="search file" class="search-file">
+                  </div>
+                  <a href="#" class="btn btn-load pull-right">Load</a>
+
+                  <h3 class="title map-file">Map file columns to contact Attributes</h3>
+                  <p class="validate-fn">We will notify once the file uploaded</p>
+
+                  <table class="table" id="map_columns">
+                    <tr>
+                      <th>Column Name</th>
+                      <th>Contact Attributes</th>
+                    </tr>
+                    <tr>
+                      <td>First Name</td>
+                      <td>
+                        <select class="selectpicker" data-width="150px">
+                          <option value="1">first name</option>
+                          <option value="2">last name</option>
+                          <option value="3">home</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Last Name</td>
+                      <td>
+                        <select class="selectpicker" data-width="150px">
+                          <option value="1">first name</option>
+                          <option value="2">last name</option>
+                          <option value="3">home</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Home</td>
+                      <td>
+                        <select class="selectpicker" data-width="150px">
+                          <option value="1">first name</option>
+                          <option value="2">last name</option>
+                          <option value="3">home</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>
+                        <a href="#" class="btn btn-load">Import</a>
+                      </td>
+                    </tr> 
+                  </table>
                 </div>
-                <a href="#" class="btn btn-load pull-right">Load</a>
-
-                <h3 class="title map-file">Map file columns to contact Attributes</h3>
-                <p class="validate-fn">We will notify once the file uploaded</p>
-
-                <table class="table" id="map_columns">
-                  <tr>
-                    <th>Column Name</th>
-                    <th>Contact Attributes</th>
-                  </tr>
-                  <tr>
-                    <td>First Name</td>
-                    <td>
-                      <select class="selectpicker" data-width="150px">
-                        <option value="1">first name</option>
-                        <option value="2">last name</option>
-                        <option value="3">home</option>
-                      </select>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Last Name</td>
-                    <td>
-                      <select class="selectpicker" data-width="150px">
-                        <option value="1">first name</option>
-                        <option value="2">last name</option>
-                        <option value="3">home</option>
-                      </select>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Home</td>
-                    <td>
-                      <select class="selectpicker" data-width="150px">
-                        <option value="1">first name</option>
-                        <option value="2">last name</option>
-                        <option value="3">home</option>
-                      </select>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td>
-                      <a href="#" class="btn btn-load">Import</a>
-                    </td>
-                  </tr> 
-                </table>
               </div>
             </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
 
@@ -198,7 +203,7 @@
     <script src="../js/select2.min.js"></script>
     <script src="../js/bootstrap-select.min.js"></script>
     <script src="../js/bootstrap-datepicker.min.js"></script>
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
     
 

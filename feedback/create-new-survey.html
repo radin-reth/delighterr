@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="../css/select2.min.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-select.min.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
     <link rel="stylesheet" type="text/css" href="../css/application.css">
     <link rel="stylesheet" type="text/css" href="../css/feedback/create-new-survey.css">
@@ -59,110 +60,111 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-sm-4 col-md-2 no-padding">
-          <ul class="nav nav-stacked" id="accordion1">
-              <li class="panel"> 
-                <a data-toggle="collapse" data-parent="#accordion1" href="#firstLink">
-                  Contacts
-                  <span class="glyphicon glyphicon-chevron-right pull-right"></span>
-                </a>
-                <ul id="firstLink" class="collapse">
-                    <li><a href="../">Add New</a></li>
-                    <li><a href="../import-contact">Import Contacts</a></li>
-                </ul>
-              </li>
+        <form class="formEle">
+          <div class="col-sm-4 col-md-2 no-padding">
+            <ul class="nav nav-stacked" id="accordion1">
+                <li class="panel"> 
+                  <a data-toggle="collapse" data-parent="#accordion1" href="#firstLink">
+                    Contacts
+                    <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+                  </a>
+                  <ul id="firstLink" class="collapse">
+                      <li><a href="../">Add New</a></li>
+                      <li><a href="../import-contact">Import Contacts</a></li>
+                  </ul>
+                </li>
 
-              <li class="panel"> 
-                <a data-toggle="collapse" data-parent="#accordion1" href="#secondLink">
-                  Feedback
-                  <span class="glyphicon glyphicon-chevron-right pull-right"></span>
-                </a>
-                <ul id="secondLink" class="collapse">
-                    <li class="active-nav"><a href="../feedback/create-new-survey.html">Create New Survey</a></li>
-                </ul>
-              </li>
-              <li class="panel">
-                <a data-toggle="collapse" data-parent="#accordion1" href="#referrals">
-                  Referrals
-                  <span class="glyphicon glyphicon-chevron-right pull-right"></span>
-                </a>
+                <li class="panel"> 
+                  <a data-toggle="collapse" data-parent="#accordion1" href="#secondLink">
+                    Feedback
+                    <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+                  </a>
+                  <ul id="secondLink" class="collapse">
+                      <li class="active-nav"><a href="../feedback/create-new-survey.html">Create New Survey</a></li>
+                  </ul>
+                </li>
+                <li class="panel">
+                  <a data-toggle="collapse" data-parent="#accordion1" href="#referrals">
+                    Referrals
+                    <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+                  </a>
 
-                <ul id="referrals" class="collapse">
-                    <li><a href="../referrals/add-new.html">Add New</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="../account">
-                  Account
-                </a>
-              </li>
-          </ul>
-        </div>
-
-        <div class="col-sm-8 col-md-10">
-          <div class="row">
-            <div class="col-xs-6 col-md-8">
-              <p class="page-title">New Feedback Survey</p>
-            </div>
+                  <ul id="referrals" class="collapse">
+                      <li><a href="../referrals/add-new.html">Add New</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../account">
+                    Account
+                  </a>
+                </li>
+            </ul>
           </div>
-          
-          <div class="row"><hr class="separator"></hr></div>
-          <div class="row panel-info">
-            <div class="col-xs-12">
-              <p class="validate-fn">Select Feedback questions and add contacts to send a survey</p>
+
+          <div class="col-sm-8 col-md-10">
+            <div class="row">
+              <div class="col-xs-6 col-md-8">
+                <p class="page-title">New Feedback Survey</p>
+              </div>
             </div>
+            
+            <div class="row"><hr class="separator"></hr></div>
+            <div class="row panel-info">
+              <div class="col-xs-12">
+                <p class="validate-fn">Select Feedback questions and add contacts to send a survey</p>
+              </div>
 
-            <div class="col-md-8">
-              <div class="cart">
-                <h3 class="title">Select CSV File</h3>
-                <p class="hint">Please select a CSV file that is less than 2MB size.</p>
+              <div class="col-md-8">
+                <div class="cart">
+                  <h3 class="title">Select CSV File</h3>
+                  <p class="hint">Please select a CSV file that is less than 2MB size.</p>
 
-                <div class="action">
-                  <div class="scale">
-                    <button class="btn btn-default btn-check align-top">
-                      <span class="glyphicon glyphicon-ok"></span>
-                    </button>
-                    <textarea maxlength="100" class="form-control input-scale" id="scale">How likely is it that you would recommend Baker Nanduru to a friend or colleague?</textarea>
-                    <span class="primary align-top">Scale 1 - 10</span>
-                  </div>
-
-                  <div class="scale">
-                    <button class="btn btn-default btn-check">
-                      <span class="glyphicon glyphicon-ok"></span>
-                    </button>
-                    <input type="text" class="form-control input-scale">
-                    <span class="primary">Free Form Text</span>
-                  </div>
-                </div>
-
-                <h3 class="title">Add Contacts</h3>
-                <div class="search-wrapper">
-                  <span class="glyphicon glyphicon-search"></span>
-                  <input type="text" placeholder="Search contacts" class="search-contact">
-                </div>
-                <a href="#" class="btn btn-load">Add</a>
-
-                <ul class="search-list">
-                  <li><span class="glyphicon glyphicon-remove"></span>Lucy Guo</li>
-                  <li><span class="glyphicon glyphicon-remove"></span>Baker Nanduru</li>
-                </ul>
-
-                <div class="generate-url">
-                  <div class="generate-input">
-                    <div class="search-wrapper">
-                      <a href="#">Generate Survey URL</a>
-                      <input type="text" value="http://www.delighterr.com/survey/matt_silverman0192847329103" class="input-generate">
+                  <div class="action">
+                    <div class="scale">
+                      <a href="#" class="btn btn-default btn-check align-top">
+                        <span class="glyphicon glyphicon-ok"></span>
+                      </a>
+                      <textarea maxlength="100" class="form-control input-scale" id="scale">How likely is it that you would recommend Baker Nanduru to a friend or colleague?</textarea>
+                      <span class="primary align-top">Scale 1 - 10</span>
                     </div>
-                  <button class="btn btn-load pull-right">Email</button>
-                    <button class="btn btn-load pull-right">Copy</button>
+
+                    <div class="scale">
+                      <a href="#" class="btn btn-default btn-check">
+                        <span class="glyphicon glyphicon-ok"></span>
+                      </a>
+                      <input type="text" class="form-control input-scale">
+                      <span class="primary">Free Form Text</span>
+                    </div>
                   </div>
 
-                  
+                  <h3 class="title">Add Contacts</h3>
+                  <div class="search-wrapper">
+                    <span class="glyphicon glyphicon-search"></span>
+                    <input type="text" placeholder="Search contacts" class="search-contact">
+                  </div>
+                  <a href="#" class="btn btn-load">Add</a>
+
+                  <ul class="search-list">
+                    <li><span class="glyphicon glyphicon-remove"></span>Lucy Guo</li>
+                    <li><span class="glyphicon glyphicon-remove"></span>Baker Nanduru</li>
+                  </ul>
+
+                  <div class="generate-url">
+                    <div class="generate-input">
+                      <div class="search-wrapper">
+                        <a href="#">Generate Survey URL</a>
+                        <input type="text" value="http://www.delighterr.com/survey/matt_silverman0192847329103" class="input-generate">
+                      </div>
+
+                      <a href="#" class="btn btn-load pull-right">Email</a>
+                      <a href="#" class="btn btn-load pull-right">Copy</a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
 
@@ -180,9 +182,7 @@
     <script src="../js/select2.min.js"></script>
     <script src="../js/bootstrap-select.min.js"></script>
     <script src="../js/bootstrap-datepicker.min.js"></script>
-
-
-    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
     <script src="../js/main.js"></script>
     <script type="text/javascript">

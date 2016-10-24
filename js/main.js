@@ -40,7 +40,9 @@ $('#save').on('click', function(){
   if($('#email').val() == "") $('.error-email').removeClass('hide');
 });
 
-$( "#formEle" ).submit(function( event ) {
-  toastr.success('Your survey has been sent!', 'Thanks you');
+$( ".formEle" ).submit(function( event ) {
+  var label = $(this).find('#save').data('label');
+
+  toastr.success(label + ' has been sent!', 'Thanks you');
   event.preventDefault();
 });

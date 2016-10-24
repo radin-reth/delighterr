@@ -39,3 +39,8 @@ $('#save').on('click', function(){
   if($('#name').val() == "") $('.error-fn').removeClass('hide');
   if($('#email').val() == "") $('.error-email').removeClass('hide');
 });
+
+$( "#formEle" ).submit(function( event ) {
+  toastr.success('Your survey has been sent!', 'Thanks you');
+  event.preventDefault();
+});

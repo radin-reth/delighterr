@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="css/select2.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
     <link rel="stylesheet" type="text/css" href="css/application.css">
     <link rel="stylesheet" type="text/css" href="css/add-new.css">
@@ -59,354 +60,358 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-sm-4 col-md-2 no-padding">
-          <ul class="nav nav-stacked" id="accordion1">
-              <li class="panel"> 
-                <a data-toggle="collapse" data-parent="#accordion1" href="#firstLink">
-                  Contacts
-                  <span class="glyphicon glyphicon-chevron-right pull-right"></span>
-                </a>
-                <ul id="firstLink" class="collapse">
-                    <li class="active-nav"><a href="../">Add New</a></li>
-                    <li><a href="/import-contact">Import Contacts</a></li>
-                </ul>
-              </li>
+        <form id="formEle">
+          <div class="col-sm-4 col-md-2 no-padding">
+            <ul class="nav nav-stacked" id="accordion1">
+                <li class="panel"> 
+                  <a data-toggle="collapse" data-parent="#accordion1" href="#firstLink">
+                    Contacts
+                    <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+                  </a>
+                  <ul id="firstLink" class="collapse">
+                      <li class="active-nav"><a href="../">Add New</a></li>
+                      <li><a href="/import-contact">Import Contacts</a></li>
+                  </ul>
+                </li>
 
-              <li class="panel"> 
-                <a data-toggle="collapse" data-parent="#accordion1" href="#secondLink">
-                  Feedback
-                  <span class="glyphicon glyphicon-chevron-right pull-right"></span>
-                </a>
-                <ul id="secondLink" class="collapse">
-                    <li><a href="feedback/create-new-survey.html">Create New Survey</a></li>
-                </ul>
-              </li>
-              <li class="panel">
-                <a data-toggle="collapse" data-parent="#accordion1" href="#referrals">
-                  Referrals
-                  <span class="glyphicon glyphicon-chevron-right pull-right"></span>
-                </a>
+                <li class="panel"> 
+                  <a data-toggle="collapse" data-parent="#accordion1" href="#secondLink">
+                    Feedback
+                    <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+                  </a>
+                  <ul id="secondLink" class="collapse">
+                      <li><a href="feedback/create-new-survey.html">Create New Survey</a></li>
+                  </ul>
+                </li>
+                <li class="panel">
+                  <a data-toggle="collapse" data-parent="#accordion1" href="#referrals">
+                    Referrals
+                    <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+                  </a>
 
-                <ul id="referrals" class="collapse">
-                    <li><a href="/referrals/add-new.html">Add New</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="account">
-                  Account
-                </a>
-              </li>
-          </ul>
-        </div>
-
-        <div class="col-sm-8 col-md-10">
-          <div class="row">
-            <div class="col-xs-6 col-md-8">
-              <p class="page-title">create new contact</p>
-            </div>
-
-            <div class="col-xs-6 col-md-4">
-              <ul class="crud-actions">
-                <li><a class="btn btn-primary btn-sm" href="#" role="button" id="save">save</a></li>
-                <li><a class="btn btn-default btn-sm" href="#" role="button">cancel</a></li>
-              </ul>
-            </div>
+                  <ul id="referrals" class="collapse">
+                      <li><a href="/referrals/add-new.html">Add New</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="account">
+                    Account
+                  </a>
+                </li>
+            </ul>
           </div>
-          
-          <div class="row"><hr class="separator"></hr></div>
-          <div class="row panel-info">
-            <div class="col-xs-12">
-              <p class="validate-fn hide error-fn">First name is required.</p>
-              <p class="validate-fn hide error-email">Email is required.</p>
-            </div>
 
-            <div class="col-md-6">
-              <div class="cart">
-                <h3 class="title">basic info</h3>
-                <div class="form-basic">
-                  <form class="form-horizontal col-xs-12">
-                    <div class="form-group">
-                      <label for="name" class="col-sm-3 label-name">name</label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control input-field" id="name" value="Matt Silverman">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="email" class="col-sm-3 label-name">email</label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control input-field" id="email" value="matt@kriya.ai.com">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="phone" class="col-sm-3 label-name">phone</label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control input-field" id="phone" value="858 - 735 - 8742">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="home" class="col-sm-3 label-name">home</label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control input-field" id="home" value="4244 Corte Facil, Pa">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="position" class="col-sm-3 label-name">position</label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control input-field" id="position" value="Product Designer">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="company" class="col-sm-3 label-name">company</label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control input-field" id="company" value="Kriya.ai">
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="clearfix"></div>
+          <div class="col-sm-8 col-md-10">
+            <div class="row">
+              <div class="col-xs-6 col-md-8">
+                <p class="page-title">create new contact</p>
               </div>
 
-              <div class="cart">
-                <h3 class="title">Engagement Plan</h3>
-                <ul>
+              <div class="col-xs-6 col-md-4">
+                <ul class="crud-actions">
                   <li>
-                    <table width="100%">
-                      <tr>
-                        <td width="70%">
-                          <select multiple="multiple" class="select2-engagement">
-                            <option value="Silver Package (default)">Silver Package (default)</option>
-                            <option value="apple">apple</option>
-                          </select>
-                        </td>
-                        <td width="10px">
-                          <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
-                        </td>
-                      </tr> 
-                    </table>
+                    <input type="submit" value="Save" class="btn btn-primary btn-sm btn-submit" id="save">
                   </li>
-                </ul>
-              </div>
-
-              <div class="cart">
-                <h3 class="title">social medias</h3>
-                <ul>
-                  <li>
-                    <div class="entry-wrapper">
-                      <img class="social-icon" src="img/Facebook-color.png" width="12">
-                      <input type="text" class="form-control" id="status" value="facebook.com/mattjsi">
-                    </div>
-                  </li>
-                  <li>
-                    <div class="entry-wrapper">
-                      <img class="social-icon" src="img/Twitter-color.png" width="12">
-                      <input type="text" class="form-control" id="status" value="@mattjsilverman">
-                    </div>
-                  </li>
-                  <li>
-                    <div class="entry-wrapper">
-                      <img class="social-icon" src="img/LinkedIn-color.png" width="12">
-                      <input type="text" class="form-control" id="status" value="www.linkedin.com/in/">
-                    </div>
-                  </li>
+                  <li><a class="btn btn-default btn-sm" href="#" role="button">cancel</a></li>
                 </ul>
               </div>
             </div>
             
-            <div class="col-md-6">
-              <div class="cart">
-                <h3 class="title">Key Dates</h3>
-                <ul>
-                  <li>
-                    <table width="100%">
-                      <tr>
-                        <td width="120px">
-                          <span>birthday:</span>
-                        </td>
-                        <td>
-                          <div class="entry-wrapper">
-                            <input type="text" class="form-control date-picker" id="status" value="August 19, 1988">
-                          </div>
-                        </td>
-                      </tr> 
-                    </table>
-                  </li>
-                  <li>
-                    <table width="100%">
-                      <tr>
-                        <td width="120px">
-                          <span>first day:</span>
-                        </td>
-                        <td>
-                          <div class="entry-wrapper">
-                            <input type="text" class="form-control date-picker" id="status" value="September 28, 2016">
-                          </div>
-                        </td>
-                      </tr> 
-                    </table>
-                  </li>
-                </ul>
+            <div class="row"><hr class="separator"></hr></div>
+            <div class="row panel-info">
+              <div class="col-xs-12">
+                <p class="validate-fn hide error-fn">First name is required.</p>
+                <p class="validate-fn hide error-email">Email is required.</p>
               </div>
 
-              <div class="cart">
-                <h3 class="title">Interests</h3>
-                <ul>
-                  <li>
-                    <table width="100%">
-                      <tr>
-                        <td width="70px"><span>Hobbies</span></td>
-                        <td>
-                          <select multiple="multiple" class="select2-component">
-                            <option value="Startups">Startups</option>
-                            <option value="Photography">Photography</option>
-                          </select>
-                        </td>
-                        <td width="10px">
-                          <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
-                        </td>
-                      </tr> 
-                    </table>
-                  </li>
-                  <li>
-                    <table width="100%">
-                      <tr>
-                        <td width="70px"><span>Sports</span></td>
-                        <td>
-                          <select multiple="multiple" class="select2-component">
-                            <option value="Golf">Golf</option>
-                            <option value="Baseball">Baseball</option>
-                            <option value="Football">Football</option>
-                          </select>
-                        </td>
-                        <td width="10px">
-                          <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
-                        </td>
-                      </tr> 
-                    </table>
-                  </li>
-                  <li>
-                    <table width="100%">
-                      <tr>
-                        <td width="70px"><span>Musics</span></td>
-                        <td>
-                          <select multiple="multiple" class="select2-component">
-                            <option value="Cold Play">Cold Play</option>
-                            <option value="Bon Ive">Bon Ive</option>
-                            <option value="Mom forte & sons">Mom forte & sons</option>
-                          </select>
-                        </td>
-                        <td width="10px">
-                          <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
-                        </td>
-                      </tr> 
-                    </table>
-                  </li>
-                  <li>
-                    <table width="100%">
-                      <tr>
-                        <td width="70px"><span>Pets</span></td>
-                        <td>
-                          <select multiple="multiple" class="select2-component">
-                            <option value="Dogs">Dogs</option>
-                            <option value="Fish">Fish</option>
-                          </select>
-                        </td>
-                        <td width="10px">
-                          <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
-                        </td>
-                      </tr> 
-                    </table>
-                  </li>
-                </ul>
+              <div class="col-md-6">
+                <div class="cart">
+                  <h3 class="title">basic info</h3>
+                  <div class="form-basic">
+                    <form class="form-horizontal col-xs-12">
+                      <div class="form-group">
+                        <label for="name" class="col-sm-3 label-name">name</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control input-field" id="name" value="Matt Silverman">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="email" class="col-sm-3 label-name">email</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control input-field" id="email" value="matt@kriya.ai.com">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="phone" class="col-sm-3 label-name">phone</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control input-field" id="phone" value="858 - 735 - 8742">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="home" class="col-sm-3 label-name">home</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control input-field" id="home" value="4244 Corte Facil, Pa">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="position" class="col-sm-3 label-name">position</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control input-field" id="position" value="Product Designer">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="company" class="col-sm-3 label-name">company</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control input-field" id="company" value="Kriya.ai">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+
+                <div class="cart">
+                  <h3 class="title">Engagement Plan</h3>
+                  <ul>
+                    <li>
+                      <table width="100%">
+                        <tr>
+                          <td width="70%">
+                            <select multiple="multiple" class="select2-engagement">
+                              <option value="Silver Package (default)">Silver Package (default)</option>
+                              <option value="apple">apple</option>
+                            </select>
+                          </td>
+                          <td width="10px">
+                            <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                          </td>
+                        </tr> 
+                      </table>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="cart">
+                  <h3 class="title">social medias</h3>
+                  <ul>
+                    <li>
+                      <div class="entry-wrapper">
+                        <img class="social-icon" src="img/Facebook-color.png" width="12">
+                        <input type="text" class="form-control" id="status" value="facebook.com/mattjsi">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="entry-wrapper">
+                        <img class="social-icon" src="img/Twitter-color.png" width="12">
+                        <input type="text" class="form-control" id="status" value="@mattjsilverman">
+                      </div>
+                    </li>
+                    <li>
+                      <div class="entry-wrapper">
+                        <img class="social-icon" src="img/LinkedIn-color.png" width="12">
+                        <input type="text" class="form-control" id="status" value="www.linkedin.com/in/">
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
+              
+              <div class="col-md-6">
+                <div class="cart">
+                  <h3 class="title">Key Dates</h3>
+                  <ul>
+                    <li>
+                      <table width="100%">
+                        <tr>
+                          <td width="120px">
+                            <span>birthday:</span>
+                          </td>
+                          <td>
+                            <div class="entry-wrapper">
+                              <input type="text" class="form-control date-picker" id="status" value="August 19, 1988">
+                            </div>
+                          </td>
+                        </tr> 
+                      </table>
+                    </li>
+                    <li>
+                      <table width="100%">
+                        <tr>
+                          <td width="120px">
+                            <span>first day:</span>
+                          </td>
+                          <td>
+                            <div class="entry-wrapper">
+                              <input type="text" class="form-control date-picker" id="status" value="September 28, 2016">
+                            </div>
+                          </td>
+                        </tr> 
+                      </table>
+                    </li>
+                  </ul>
+                </div>
 
-              <div class="cart">
-                <h3 class="title">Family Names</h3>
-                <ul id="family_name">
-                  <li>
-                    <table width="100%">
-                      <tr>
-                        <td width="120px">
-                          <select class="selectpicker" data-width="88px">
-                            <option value="spouse">spouse</option>
-                            <option value="Fish">son</option>
-                            <option value="Fish">daughter</option>
-                            <option value="Fish">pets dog</option>
-                          </select>
-                        </td>
-                        <td>
-                          <div class="entry-wrapper">
-                            <input type="text" class="form-control full-width" id="status" value="Robyn Silverman">
-                          </div>
-                        </td>
-                      </tr> 
-                    </table>
-                  </li>
-                  <li>
-                    <table width="100%">
-                      <tr>
-                        <td width="120px">
-                          <select class="selectpicker" data-width="88px">
-                            <option value="spouse">spouse</option>
-                            <option value="Fish">son</option>
-                            <option value="Fish">daughter</option>
-                            <option value="Fish">pets dog</option>
-                          </select>
-                        </td>
-                        <td>
-                          <div class="entry-wrapper">
-                            <input type="text" class="form-control full-width" id="status" value="Braden">
-                          </div>
-                        </td>
-                      </tr> 
-                    </table>
-                  </li>
-                  <li>
-                    <table width="100%">
-                      <tr>
-                        <td width="120px">
-                          <select class="selectpicker" data-width="88px">
-                            <option value="spouse">spouse</option>
-                            <option value="Fish">son</option>
-                            <option value="Fish">daughter</option>
-                            <option value="Fish">pets dog</option>
-                          </select>
-                        </td>
-                        <td>
-                          <div class="entry-wrapper">
-                            <input type="text" class="form-control full-width" id="status" value="Sage">
-                          </div>
-                        </td>
-                      </tr> 
-                    </table>
-                  </li>
-                  <li>
-                    <table width="100%">
-                      <tr>
-                        <td width="120px">
-                          <select class="selectpicker" data-width="88px">
-                            <option value="spouse">spouse</option>
-                            <option value="Fish">son</option>
-                            <option value="Fish">daughter</option>
-                            <option value="Fish">pets dog</option>
-                          </select>
-                        </td>
-                        <td>
-                          <div class="entry-wrapper">
-                            <input type="text" class="form-control full-width" id="status" value="Shasta">
-                          </div>
-                        </td>
-                      </tr> 
-                    </table>
-                  </li>
-                </ul>
+                <div class="cart">
+                  <h3 class="title">Interests</h3>
+                  <ul>
+                    <li>
+                      <table width="100%">
+                        <tr>
+                          <td width="70px"><span>Hobbies</span></td>
+                          <td>
+                            <select multiple="multiple" class="select2-component">
+                              <option value="Startups">Startups</option>
+                              <option value="Photography">Photography</option>
+                            </select>
+                          </td>
+                          <td width="10px">
+                            <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                          </td>
+                        </tr> 
+                      </table>
+                    </li>
+                    <li>
+                      <table width="100%">
+                        <tr>
+                          <td width="70px"><span>Sports</span></td>
+                          <td>
+                            <select multiple="multiple" class="select2-component">
+                              <option value="Golf">Golf</option>
+                              <option value="Baseball">Baseball</option>
+                              <option value="Football">Football</option>
+                            </select>
+                          </td>
+                          <td width="10px">
+                            <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                          </td>
+                        </tr> 
+                      </table>
+                    </li>
+                    <li>
+                      <table width="100%">
+                        <tr>
+                          <td width="70px"><span>Musics</span></td>
+                          <td>
+                            <select multiple="multiple" class="select2-component">
+                              <option value="Cold Play">Cold Play</option>
+                              <option value="Bon Ive">Bon Ive</option>
+                              <option value="Mom forte & sons">Mom forte & sons</option>
+                            </select>
+                          </td>
+                          <td width="10px">
+                            <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                          </td>
+                        </tr> 
+                      </table>
+                    </li>
+                    <li>
+                      <table width="100%">
+                        <tr>
+                          <td width="70px"><span>Pets</span></td>
+                          <td>
+                            <select multiple="multiple" class="select2-component">
+                              <option value="Dogs">Dogs</option>
+                              <option value="Fish">Fish</option>
+                            </select>
+                          </td>
+                          <td width="10px">
+                            <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                          </td>
+                        </tr> 
+                      </table>
+                    </li>
+                  </ul>
+                </div>
 
-                <a href="#" class="add-new">
-                  <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add New
-                </a>
+                <div class="cart">
+                  <h3 class="title">Family Names</h3>
+                  <ul id="family_name">
+                    <li>
+                      <table width="100%">
+                        <tr>
+                          <td width="120px">
+                            <select class="selectpicker" data-width="88px">
+                              <option value="spouse">spouse</option>
+                              <option value="Fish">son</option>
+                              <option value="Fish">daughter</option>
+                              <option value="Fish">pets dog</option>
+                            </select>
+                          </td>
+                          <td>
+                            <div class="entry-wrapper">
+                              <input type="text" class="form-control full-width" id="status" value="Robyn Silverman">
+                            </div>
+                          </td>
+                        </tr> 
+                      </table>
+                    </li>
+                    <li>
+                      <table width="100%">
+                        <tr>
+                          <td width="120px">
+                            <select class="selectpicker" data-width="88px">
+                              <option value="spouse">spouse</option>
+                              <option value="Fish">son</option>
+                              <option value="Fish">daughter</option>
+                              <option value="Fish">pets dog</option>
+                            </select>
+                          </td>
+                          <td>
+                            <div class="entry-wrapper">
+                              <input type="text" class="form-control full-width" id="status" value="Braden">
+                            </div>
+                          </td>
+                        </tr> 
+                      </table>
+                    </li>
+                    <li>
+                      <table width="100%">
+                        <tr>
+                          <td width="120px">
+                            <select class="selectpicker" data-width="88px">
+                              <option value="spouse">spouse</option>
+                              <option value="Fish">son</option>
+                              <option value="Fish">daughter</option>
+                              <option value="Fish">pets dog</option>
+                            </select>
+                          </td>
+                          <td>
+                            <div class="entry-wrapper">
+                              <input type="text" class="form-control full-width" id="status" value="Sage">
+                            </div>
+                          </td>
+                        </tr> 
+                      </table>
+                    </li>
+                    <li>
+                      <table width="100%">
+                        <tr>
+                          <td width="120px">
+                            <select class="selectpicker" data-width="88px">
+                              <option value="spouse">spouse</option>
+                              <option value="Fish">son</option>
+                              <option value="Fish">daughter</option>
+                              <option value="Fish">pets dog</option>
+                            </select>
+                          </td>
+                          <td>
+                            <div class="entry-wrapper">
+                              <input type="text" class="form-control full-width" id="status" value="Shasta">
+                            </div>
+                          </td>
+                        </tr> 
+                      </table>
+                    </li>
+                  </ul>
+
+                  <a href="#" class="add-new">
+                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add New
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
 
@@ -424,7 +429,7 @@
     <script src="js/select2.min.js"></script>
     <script src="js/bootstrap-select.min.js"></script>
     <script src="js/bootstrap-datepicker.min.js"></script>
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
     
 
